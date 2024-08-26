@@ -1,0 +1,13 @@
+# Memastikan server mengizinkan metode POST
+<Limit POST>
+    Allow from all
+</Limit>
+
+# Memastikan server dapat mengeksekusi file PHP
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+<Limit GET POST>
+    Allow from all
+</Limit>
